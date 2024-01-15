@@ -3,7 +3,6 @@ import i18n from "./plugins/i18n";
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head() {
-    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
     return {
       // 设置title多语言
       title: this.$t("head.title"),
