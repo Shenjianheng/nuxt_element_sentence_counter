@@ -1,4 +1,9 @@
-import i18n from "./plugins/i18n";
+import en from "./i18n/en"
+import ja from "./i18n/ja"
+import ko from "./i18n/ko"
+import fil from "./i18n/fil"
+import zh from "./i18n/zh"
+import fr from "./i18n/fr"
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -88,7 +93,18 @@ export default {
             name: 'Pilipino'
           },
         ],
-        vueI18n: i18n,
+        vueI18n: {
+          locale: "zh",
+          fallbackLocale: "zh",
+          messages: {
+              en,
+              ja,
+              ko,
+              fil,
+              zh,
+              fr
+          }
+        },
         detectBrowserLanguage: {
           useCookie: true,
           cookieKey: 'i18n_redirected'
