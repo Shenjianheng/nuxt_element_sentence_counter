@@ -1,5 +1,5 @@
 // 定义韩语语言包对象
-const zh = {
+const ko = {
     title: {
         characters: "문자",
         words: "단어",
@@ -37,4 +37,4 @@ const zh = {
         }
     }
 }
-export default zh;
+export default ko;
