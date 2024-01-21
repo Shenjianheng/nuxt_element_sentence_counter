@@ -15,7 +15,16 @@ export default {
         { hid: 'description', name: 'description', content: this.$t('head.meta.description') },
         { name: 'format-detection', content: 'telephone=no' },
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'canonical', href: this.$t('head.link.i18nRel') }
+      ],
+      script: [
+        {
+          src: 'https://us.umami.is/script.js',
+          async: true,
+        }
+      ]
     }
   },
 
@@ -126,6 +135,9 @@ export default {
                     },
                     meta: {
                         description: "This sentence counter can handle any text content, from a single text string to a large number of text paragraphs separated by multiple line breaks. It can add a bit of fun for your tedious work."
+                    },
+                    link: {
+                        i18nRel: "https://sentence-counter.online/en"
                     }
                 }
             },
@@ -165,6 +177,9 @@ export default {
                     },
                     meta: {
                         description: "この文カウンタは、単一のテキスト文字列から複数の改行文字で区切られた多数のテキスト段落まで、任意のテキスト内容を処理できます。退屈な仕事に少し楽しみを加えることができます。"
+                    },
+                    link: {
+                        i18nRel: "https://sentence-counter.online/ja"
                     }
                 }
             },
@@ -204,6 +219,9 @@ export default {
                     },
                     meta: {
                         description: "이 문 카운터는 단일 텍스트 문자열에서 여러 줄 바꿈으로 구분된 많은 텍스트 단락까지 모든 텍스트 내용을 처리할 수 있습니다.그것은 너의 무미건조한 일에 약간의 즐거움을 더할 수 있다."
+                    },
+                    link: {
+                        i18nRel: "https://sentence-counter.online/ko"
                     }
                 }
             },
@@ -243,6 +261,9 @@ export default {
                     },
                     meta: {
                         description: "Ang statement counter na ito ay maaaring hawakan ang anumang nilalaman ng text, mula sa isang text string hanggang sa malaking bilang ng mga tala ng text na hiwalay sa pamamagitan ng iba't ibang pahinga ng mga linya. Maaari itong magdagdag ng isang bit ng masaya sa iyong pagod na trabaho."
+                    },
+                    link: {
+                        i18nRel: "https://sentence-counter.online/fil"
                     }
                 }
             },
@@ -282,6 +303,9 @@ export default {
                     },
                     meta: {
                         description: "此语句计数器可以处理任何文本内容，从单个文本字符串到由多个换行符分隔的大量文本段落。它可以为你乏味的工作增添一点乐趣。"
+                    },
+                    link: {
+                        i18nRel: "https://sentence-counter.online"
                     }
                 }
             },
@@ -321,6 +345,9 @@ export default {
                     },
                     meta: {
                         description: "Ce compteur d'instructions peut gérer n'importe quel contenu texte, d'une seule chaîne de texte à un grand nombre de paragraphes de texte séparés par plusieurs sauts de ligne. Il peut ajouter un peu de plaisir à votre travail fastidieux."
+                    },
+                    link: {
+                        i18nRel: "https://sentence-counter.online/fr"
                     }
                 }
             }
