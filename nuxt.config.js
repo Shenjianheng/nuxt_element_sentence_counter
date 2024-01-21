@@ -53,6 +53,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // https://sitemap.nuxtjs.org
+    '@nuxtjs/sitemap',
     // https://i18n.nuxtjs.org/v7/setup
     [
       '@nuxtjs/i18n', {
@@ -358,8 +360,53 @@ export default {
           cookieKey: 'i18n_redirected'
         },
       }
-    ]
+    ],
   ],
+
+  // sitemap module configuration: https://sitemap.nuxtjs.org/guide/configuration
+  sitemap: {
+    path: "/sitemap.xml",                 //生成的文件路径
+    hostname: "https://sentence-counter.online/",   // 网站的网址
+    defaults: {
+        changefred: "daily",
+        lastmod: new Date(),   // 最后更新时间
+    },
+    routes: () => { 
+        const routes = [
+            {
+                url: '/',
+                changefred: 'daily',
+                lastmod: new Date()
+            },
+            {
+                url: '/ja',
+                changefred: 'daily',
+                lastmod: new Date()
+            },
+            {
+                url: '/ko',
+                changefred: 'daily',
+                lastmod: new Date()
+            },
+            {
+                url: '/fil',
+                changefred: 'daily',
+                lastmod: new Date()
+            },
+            {
+                url: '/en',
+                changefred: 'daily',
+                lastmod: new Date()
+            },
+            {
+                url: '/fr',
+                changefred: 'daily',
+                lastmod: new Date()
+            },
+        ]
+        return routes
+    }    // 路由配置
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
